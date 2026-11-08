@@ -3,3 +3,4 @@ __pycache__/
 *.pyc
 vault_state.json
 .venv/
+node_modules/
