@@ -176,8 +176,7 @@ def setup_save(request: Request, pin: str = Form(""), pin2: str = Form(""), limi
 # ---- Assistant API (used by static/app.js) ----------------------------------------
 
 def _state(acct):
-    pending = acct.get("pending")
-    return {"pending": {"type": pending["type"], "readback": pending["readback"]} if pending else None,
+    return {"pending": pages.pending_view(acct),
             "locked": account.is_idle_locked(acct),
             "lockout_seconds": account.locked_out_for(acct)}
 

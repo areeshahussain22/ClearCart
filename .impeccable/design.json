@@ -1,0 +1,510 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-09T15:24:06+00:00",
+  "title": "Design System: ClearCart",
+  "extensions": {
+    "colorMeta": {
+      "plum-ink": {
+        "role": "neutral",
+        "displayName": "Plum Ink",
+        "canonical": "#2b1a2e",
+        "tonalRamp": [
+          "#1d1120",
+          "#211323",
+          "#241627",
+          "#28182a",
+          "#2b1a2e",
+          "#756a77",
+          "#aaa3ab",
+          "#dfdde0"
+        ]
+      },
+      "plum-soft": {
+        "role": "neutral",
+        "displayName": "Plum Soft",
+        "canonical": "#5a4560",
+        "tonalRamp": [
+          "#271a2a",
+          "#342537",
+          "#402f45",
+          "#4d3a52",
+          "#5a4560",
+          "#948698",
+          "#bdb5bf",
+          "#e6e3e7"
+        ]
+      },
+      "strawberry": {
+        "role": "primary",
+        "displayName": "Strawberry",
+        "canonical": "#ffc4dd",
+        "tonalRamp": [
+          "#483343",
+          "#765769",
+          "#a37c90",
+          "#d1a0b6",
+          "#ffc4dd",
+          "#ffd9e9",
+          "#ffe7f1",
+          "#fff6fa"
+        ]
+      },
+      "bubblegum": {
+        "role": "primary",
+        "displayName": "Bubblegum",
+        "canonical": "#ff6fae",
+        "tonalRamp": [
+          "#482239",
+          "#763556",
+          "#a34974",
+          "#d15c91",
+          "#ff6fae",
+          "#ffa1ca",
+          "#ffc5df",
+          "#ffe9f3"
+        ]
+      },
+      "bubblegum-hover": {
+        "role": "primary",
+        "displayName": "Bubblegum Hover",
+        "canonical": "#ff8cbf",
+        "tonalRamp": [
+          "#48283d",
+          "#76415d",
+          "#a35a7e",
+          "#d1739e",
+          "#ff8cbf",
+          "#ffb4d5",
+          "#ffd1e5",
+          "#ffeef5"
+        ]
+      },
+      "mint": {
+        "role": "secondary",
+        "displayName": "Mint",
+        "canonical": "#bdf0da",
+        "tonalRamp": [
+          "#3b3c42",
+          "#5b6968",
+          "#7c968e",
+          "#9cc3b4",
+          "#bdf0da",
+          "#d4f5e7",
+          "#e5f9f0",
+          "#f5fdf9"
+        ]
+      },
+      "butter": {
+        "role": "secondary",
+        "displayName": "Butter",
+        "canonical": "#ffe89a",
+        "tonalRamp": [
+          "#483a35",
+          "#76664e",
+          "#a39168",
+          "#d1bd81",
+          "#ffe89a",
+          "#fff0bd",
+          "#fff6d7",
+          "#fffcf0"
+        ]
+      },
+      "sky": {
+        "role": "tertiary",
+        "displayName": "Sky",
+        "canonical": "#c7e3ff",
+        "tonalRamp": [
+          "#3d3949",
+          "#5f6477",
+          "#828ea4",
+          "#a4b9d2",
+          "#c7e3ff",
+          "#dbedff",
+          "#e9f4ff",
+          "#f7fbff"
+        ]
+      },
+      "lilac": {
+        "role": "tertiary",
+        "displayName": "Lilac",
+        "canonical": "#e3d4ff",
+        "tonalRamp": [
+          "#423649",
+          "#6a5e77",
+          "#9385a4",
+          "#bbadd2",
+          "#e3d4ff",
+          "#ede3ff",
+          "#f4eeff",
+          "#fbf9ff"
+        ]
+      },
+      "peach": {
+        "role": "tertiary",
+        "displayName": "Peach",
+        "canonical": "#ffd3bd",
+        "tonalRamp": [
+          "#48363c",
+          "#765d5c",
+          "#a3857d",
+          "#d1ac9d",
+          "#ffd3bd",
+          "#ffe2d4",
+          "#ffede5",
+          "#fff8f5"
+        ]
+      },
+      "blush-ground": {
+        "role": "neutral",
+        "displayName": "Blush Ground",
+        "canonical": "#fff3f8",
+        "tonalRamp": [
+          "#483d48",
+          "#766a74",
+          "#a398a0",
+          "#d1c5cc",
+          "#fff3f8",
+          "#fff7fa",
+          "#fffafc",
+          "#fffdfe"
+        ]
+      },
+      "sticker-white": {
+        "role": "neutral",
+        "displayName": "Sticker White",
+        "canonical": "#ffffff",
+        "tonalRamp": [
+          "#483f49",
+          "#766f77",
+          "#a39fa4",
+          "#d1cfd2",
+          "#ffffff",
+          "#ffffff",
+          "#ffffff",
+          "#ffffff"
+        ]
+      },
+      "ok-green": {
+        "role": "neutral",
+        "displayName": "OK Green",
+        "canonical": "#0a5e36",
+        "tonalRamp": [
+          "#171f21",
+          "#142f26",
+          "#103e2c",
+          "#0d4e31",
+          "#0a5e36",
+          "#60967c",
+          "#9dbfaf",
+          "#dae7e1"
+        ]
+      },
+      "stop-crimson": {
+        "role": "neutral",
+        "displayName": "Stop Crimson",
+        "canonical": "#9e1239",
+        "tonalRamp": [
+          "#341022",
+          "#4f1028",
+          "#69112d",
+          "#841133",
+          "#9e1239",
+          "#c0657e",
+          "#d8a0b0",
+          "#f0dbe1"
+        ]
+      },
+      "night-ground": {
+        "role": "neutral",
+        "displayName": "Night Ground",
+        "canonical": "#1d1320",
+        "tonalRamp": [
+          "#1b101d",
+          "#1b111e",
+          "#1c111e",
+          "#1c121f",
+          "#1d1320",
+          "#6c666e",
+          "#a5a1a6",
+          "#dddcde"
+        ]
+      },
+      "night-surface": {
+        "role": "neutral",
+        "displayName": "Night Surface",
+        "canonical": "#2a1d2e",
+        "tonalRamp": [
+          "#1d1220",
+          "#201523",
+          "#241727",
+          "#271a2a",
+          "#2a1d2e",
+          "#756c77",
+          "#aaa5ab",
+          "#dfdde0"
+        ]
+      },
+      "night-ink": {
+        "role": "neutral",
+        "displayName": "Night Ink",
+        "canonical": "#fff2f8",
+        "tonalRamp": [
+          "#483c48",
+          "#766a74",
+          "#a397a0",
+          "#d1c5cc",
+          "#fff2f8",
+          "#fff7fa",
+          "#fffafc",
+          "#fffdfe"
+        ]
+      },
+      "night-ink-soft": {
+        "role": "neutral",
+        "displayName": "Night Ink Soft",
+        "canonical": "#e6d3ea",
+        "tonalRamp": [
+          "#433645",
+          "#6c5d6e",
+          "#948598",
+          "#bdacc1",
+          "#e6d3ea",
+          "#efe2f1",
+          "#f5edf7",
+          "#fbf8fc"
+        ]
+      },
+      "night-ok": {
+        "role": "neutral",
+        "displayName": "Night OK",
+        "canonical": "#8ff0bd",
+        "tonalRamp": [
+          "#313c3c",
+          "#49695c",
+          "#60967d",
+          "#78c39d",
+          "#8ff0bd",
+          "#b6f5d4",
+          "#d2f9e5",
+          "#eefdf5"
+        ]
+      },
+      "night-stop": {
+        "role": "neutral",
+        "displayName": "Night Stop",
+        "canonical": "#ffa3c0",
+        "tonalRamp": [
+          "#482d3d",
+          "#764a5e",
+          "#a3687e",
+          "#d1859f",
+          "#ffa3c0",
+          "#ffc3d6",
+          "#ffdae6",
+          "#fff1f6"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "Page h1 only."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Section h2 and the pay sticker title."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "h3, product names, tags, price pills."
+      },
+      "body-large": {
+        "displayName": "Body Large",
+        "purpose": "Leads, chat messages, payment read-back."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "All other running text, 66ch max."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Chips and the sandbox pill; the smallest size on the sheet."
+      },
+      "button": {
+        "displayName": "Button",
+        "purpose": "Buttons and nav pills."
+      }
+    },
+    "shadows": [
+      {
+        "name": "sticker-edge",
+        "value": "0 0 0 5px #fff, 0 0 0 8px #2b1a2e, 0 6px 16px rgba(43,26,46,0.16)",
+        "purpose": "Die-cut ring and lift on whole containers; with a 3px plum border. Dark lift 0 6px 18px rgba(0,0,0,0.45). Removed under forced colours."
+      },
+      {
+        "name": "puffy-button",
+        "value": "0 6px 10px -4px rgba(43,26,46,0.55), inset 0 -4px 0 rgba(43,26,46,0.18)",
+        "purpose": "Every button."
+      },
+      {
+        "name": "focus-band",
+        "value": "outline: 4px solid #2b1a2e; outline-offset: 3px; box-shadow: 0 0 0 9px #ff6fae",
+        "purpose": "Focus on every focusable element; outline uses night ink on the dark ground."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease-spring",
+        "value": "cubic-bezier(0.34, 1.56, 0.64, 1)",
+        "purpose": "Button lift (140ms), PIN candy pop (260ms), pay sticker pop-in (420ms), Basket hop (700ms x2)."
+      },
+      {
+        "name": "ease-out-quick",
+        "value": "120ms ease-out",
+        "purpose": "Background colour changes."
+      },
+      {
+        "name": "mood-loops",
+        "value": "blink 1.2s ease-in-out infinite; sway 1.4s ease-in-out infinite",
+        "purpose": "Basket thinking dots and listening sway; all motion only under prefers-reduced-motion: no-preference."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "stack",
+        "value": "60rem"
+      },
+      {
+        "name": "small",
+        "value": "36rem"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Puffy bubblegum pill for the main action (Pay, Send, Link PayPal).",
+      "html": "<button class=\"ds-btn ds-btn-primary\">Pay £4.50</button>",
+      "css": ":host{--ink:#2b1a2e;--pink:#ffc4dd;--pink-deep:#ff6fae;--mint:#bdf0da;--butter:#ffe89a;--sky:#c7e3ff;--lilac:#e3d4ff;} .ds-btn{display:inline-flex;align-items:center;justify-content:center;min-height:56px;padding:.55rem 1.7rem;font-family:Fredoka,'Atkinson Hyperlegible',system-ui,sans-serif;font-weight:600;font-size:1.3rem;line-height:1.1;color:#2b1a2e;border:3px solid #2b1a2e;border-radius:999px;cursor:pointer;box-shadow:0 6px 10px -4px rgba(43,26,46,.55),inset 0 -4px 0 rgba(43,26,46,.18);transition:transform 140ms cubic-bezier(.34,1.56,.64,1),background-color 120ms ease-out;} .ds-btn-primary{background:#ff8cbf;} .ds-btn-primary:hover{background:#ffa8cf;transform:translateY(-2px) scale(1.02);} .ds-btn:active{transform:translateY(2px) scale(.98);} .ds-btn:focus-visible{outline:4px solid #2b1a2e;outline-offset:3px;box-shadow:0 0 0 9px #ff6fae;}"
+    },
+    {
+      "name": "Secondary Button",
+      "kind": "button",
+      "refersTo": "button-secondary",
+      "description": "White puffy pill for Cancel and Talk; sky on hover, mint when pressed.",
+      "html": "<button class=\"ds-btn ds-btn-secondary\">Cancel</button>",
+      "css": ":host{--ink:#2b1a2e;--pink:#ffc4dd;--pink-deep:#ff6fae;--mint:#bdf0da;--butter:#ffe89a;--sky:#c7e3ff;--lilac:#e3d4ff;} .ds-btn{display:inline-flex;align-items:center;justify-content:center;min-height:56px;padding:.55rem 1.7rem;font-family:Fredoka,'Atkinson Hyperlegible',system-ui,sans-serif;font-weight:600;font-size:1.3rem;line-height:1.1;color:#2b1a2e;border:3px solid #2b1a2e;border-radius:999px;cursor:pointer;box-shadow:0 6px 10px -4px rgba(43,26,46,.55),inset 0 -4px 0 rgba(43,26,46,.18);transition:transform 140ms cubic-bezier(.34,1.56,.64,1),background-color 120ms ease-out;} .ds-btn-secondary{background:#fff;} .ds-btn-secondary:hover{background:#c7e3ff;transform:translateY(-2px) scale(1.02);} .ds-btn-secondary[aria-pressed=true]{background:#bdf0da;} .ds-btn:active{transform:translateY(2px) scale(.98);} .ds-btn:focus-visible{outline:4px solid #2b1a2e;outline-offset:3px;box-shadow:0 0 0 9px #ff6fae;}"
+    },
+    {
+      "name": "Danger Button",
+      "kind": "button",
+      "refersTo": "button-danger",
+      "description": "White pill with crimson text and border, for Unlink PayPal.",
+      "html": "<button class=\"ds-btn ds-btn-danger\">Unlink PayPal</button>",
+      "css": ":host{--ink:#2b1a2e;--pink:#ffc4dd;--pink-deep:#ff6fae;--mint:#bdf0da;--butter:#ffe89a;--sky:#c7e3ff;--lilac:#e3d4ff;} .ds-btn{display:inline-flex;align-items:center;justify-content:center;min-height:56px;padding:.55rem 1.7rem;font-family:Fredoka,'Atkinson Hyperlegible',system-ui,sans-serif;font-weight:600;font-size:1.3rem;line-height:1.1;color:#2b1a2e;border:3px solid #2b1a2e;border-radius:999px;cursor:pointer;box-shadow:0 6px 10px -4px rgba(43,26,46,.55),inset 0 -4px 0 rgba(43,26,46,.18);transition:transform 140ms cubic-bezier(.34,1.56,.64,1),background-color 120ms ease-out;} .ds-btn-danger{background:#fff;color:#9e1239;border-color:#9e1239;} .ds-btn-danger:hover{transform:translateY(-2px) scale(1.02);} .ds-btn:focus-visible{outline:4px solid #2b1a2e;outline-offset:3px;box-shadow:0 0 0 9px #ff6fae;}"
+    },
+    {
+      "name": "Text Input",
+      "kind": "input",
+      "refersTo": "input-text",
+      "description": "58px pill field with a 3px plum border.",
+      "html": "<label class=\"ds-label\" for=\"ds-msg\">Type a message</label><input id=\"ds-msg\" class=\"ds-input\" type=\"text\">",
+      "css": ":host{--ink:#2b1a2e;--pink:#ffc4dd;--pink-deep:#ff6fae;--mint:#bdf0da;--butter:#ffe89a;--sky:#c7e3ff;--lilac:#e3d4ff;} .ds-label{display:block;font-family:'Atkinson Hyperlegible',system-ui,sans-serif;font-weight:700;font-size:1.25rem;color:#2b1a2e;margin-bottom:.45rem;} .ds-input{font-family:'Atkinson Hyperlegible',system-ui,sans-serif;font-size:1.25rem;min-height:58px;width:100%;max-width:24rem;padding:.5rem 1.25rem;border:3px solid #2b1a2e;border-radius:999px;background:#fff;color:#2b1a2e;caret-color:#2b1a2e;} .ds-input:focus-visible{outline:4px solid #2b1a2e;outline-offset:3px;box-shadow:0 0 0 9px #ff6fae;}"
+    },
+    {
+      "name": "Header Navigation",
+      "kind": "nav",
+      "refersTo": "nav-link",
+      "description": "Strawberry header band with Fredoka pill links; current page is a white pill.",
+      "html": "<nav class=\"ds-nav\"><a href=\"#\" aria-current=\"page\">Assistant</a><a href=\"#\">Store</a></nav>",
+      "css": ":host{--ink:#2b1a2e;--pink:#ffc4dd;--pink-deep:#ff6fae;--mint:#bdf0da;--butter:#ffe89a;--sky:#c7e3ff;--lilac:#e3d4ff;} .ds-nav{display:flex;gap:.6rem;padding:.75rem 1.5rem;background:#ffc4dd;border-bottom:3px solid #2b1a2e;} .ds-nav a{color:#2b1a2e;text-decoration:none;font-family:Fredoka,'Atkinson Hyperlegible',system-ui,sans-serif;font-weight:600;font-size:1.25rem;line-height:1;min-height:52px;display:inline-flex;align-items:center;padding:0 1.4rem;border:3px solid transparent;border-radius:999px;} .ds-nav a:hover{border-color:#2b1a2e;background:rgba(255,255,255,.5);} .ds-nav a[aria-current=page]{background:#fff;border-color:#2b1a2e;} .ds-nav a:focus-visible{outline:4px solid #2b1a2e;outline-offset:3px;box-shadow:0 0 0 9px #ff6fae;}"
+    },
+    {
+      "name": "Chip and Tag",
+      "kind": "chip",
+      "refersTo": "chip",
+      "description": "White fact chip and candy Fredoka tag, both pills.",
+      "html": "<span class=\"ds-chip\">Limit: <strong>£30.00</strong> per purchase</span> <span class=\"ds-tag\">Stationery</span> <span class=\"ds-tag ds-tag-ok\">Completed</span>",
+      "css": ":host{--ink:#2b1a2e;--pink:#ffc4dd;--pink-deep:#ff6fae;--mint:#bdf0da;--butter:#ffe89a;--sky:#c7e3ff;--lilac:#e3d4ff;} .ds-chip{display:inline-block;padding:.3rem 1rem;border:2px solid #2b1a2e;border-radius:999px;background:#fff;color:#2b1a2e;font-family:'Atkinson Hyperlegible',system-ui,sans-serif;font-size:1.0625rem;} .ds-tag{display:inline-block;padding:.25rem 1.1rem;font-family:Fredoka,'Atkinson Hyperlegible',system-ui,sans-serif;font-weight:600;font-size:1.5rem;line-height:1.3;background:#ffe89a;color:#2b1a2e;border:3px solid #2b1a2e;border-radius:999px;} .ds-tag-ok{background:#bdf0da;}"
+    },
+    {
+      "name": "Chat Log with Messages",
+      "kind": "card",
+      "refersTo": "message-assistant",
+      "description": "White die-cut sticker holding mint ClearCart and butter You message stickers.",
+      "html": "<div class=\"ds-log\"><p class=\"ds-msg\"><span class=\"ds-who\">ClearCart</span>I found one. Blue ruled notebook, A5, 4 pounds 50.</p><p class=\"ds-msg ds-you\"><span class=\"ds-who\">You</span>Yes please.</p></div>",
+      "css": ":host{--ink:#2b1a2e;--pink:#ffc4dd;--pink-deep:#ff6fae;--mint:#bdf0da;--butter:#ffe89a;--sky:#c7e3ff;--lilac:#e3d4ff;} .ds-log{background:#fff;color:#2b1a2e;border:3px solid #2b1a2e;border-radius:32px;box-shadow:0 0 0 5px #fff,0 0 0 8px #2b1a2e,0 6px 16px rgba(43,26,46,.16);padding:1.5rem;display:flex;flex-direction:column;gap:1rem;margin:10px;} .ds-msg{margin:0;font-family:'Atkinson Hyperlegible',system-ui,sans-serif;font-size:1.5rem;line-height:1.45;max-width:46ch;padding:.75rem 1.2rem .95rem;border-radius:22px;border:2px solid #2b1a2e;background:#bdf0da;} .ds-you{background:#ffe89a;} .ds-who{display:block;font-family:Fredoka,'Atkinson Hyperlegible',system-ui,sans-serif;font-weight:700;font-size:1.05rem;}"
+    },
+    {
+      "name": "Pay Sticker with PIN Bubbles",
+      "kind": "custom",
+      "refersTo": "pay-sticker",
+      "description": "The butter sticker waiting for a typed PIN, with Basket peeking over the corner and candy PIN bubbles.",
+      "html": "<section class=\"ds-plate\"><svg class=\"ds-plate-mascot\" viewBox=\"0 0 120 110\" aria-hidden=\"true\"><path d=\"M30 48 C30 14, 90 14, 90 48\" fill=\"none\" stroke=\"#2b1a2e\" stroke-width=\"7\" stroke-linecap=\"round\"/><path d=\"M12 46 H108 a6 6 0 0 1 6 7 L104 96 a10 10 0 0 1 -10 8 H26 a10 10 0 0 1 -10 -8 L6 53 a6 6 0 0 1 6 -7 Z\" fill=\"#ffc4dd\" stroke=\"#2b1a2e\" stroke-width=\"5\" stroke-linejoin=\"round\"/><ellipse cx=\"43\" cy=\"72\" rx=\"6\" ry=\"7.5\" fill=\"#2b1a2e\"/><ellipse cx=\"77\" cy=\"72\" rx=\"6\" ry=\"7.5\" fill=\"#2b1a2e\"/><circle cx=\"45\" cy=\"69\" r=\"2\" fill=\"#fff\"/><circle cx=\"79\" cy=\"69\" r=\"2\" fill=\"#fff\"/><ellipse cx=\"31\" cy=\"83\" rx=\"7\" ry=\"4.5\" fill=\"#ff6fae\" opacity=\".75\"/><ellipse cx=\"89\" cy=\"83\" rx=\"7\" ry=\"4.5\" fill=\"#ff6fae\" opacity=\".75\"/><path d=\"M51 84 q9 9 18 0\" fill=\"none\" stroke=\"#2b1a2e\" stroke-width=\"4.5\" stroke-linecap=\"round\"/></svg><h2 class=\"ds-plate-h\">Pay £4.50</h2><p class=\"ds-readback\">Blue ruled notebook, A5, quantity 1. Nothing has been charged yet.</p><div class=\"ds-pin\"><span class=\"ds-cell ds-full\"></span><span class=\"ds-cell ds-full\"></span><span class=\"ds-cell ds-next\"></span><span class=\"ds-cell\"></span></div></section>",
+      "css": ":host{--ink:#2b1a2e;--pink:#ffc4dd;--pink-deep:#ff6fae;--mint:#bdf0da;--butter:#ffe89a;--sky:#c7e3ff;--lilac:#e3d4ff;} .ds-plate{position:relative;max-width:26rem;margin:3rem 10px 10px;background:#ffe89a;color:#2b1a2e;border:3px solid #2b1a2e;border-radius:32px;box-shadow:0 0 0 5px #fff,0 0 0 8px #2b1a2e,0 6px 16px rgba(43,26,46,.16);padding:1.75rem 2rem 2rem;} .ds-plate-mascot{position:absolute;width:5rem;top:-2.4rem;right:1.5rem;} .ds-plate-h{margin:0 0 1rem;font-family:Fredoka,'Atkinson Hyperlegible',system-ui,sans-serif;font-weight:700;font-size:2rem;line-height:1.15;} .ds-readback{font-family:'Atkinson Hyperlegible',system-ui,sans-serif;font-size:1.5rem;line-height:1.45;margin:0 0 1.25rem;padding:1rem 1.2rem;background:#fff;border:2px solid #2b1a2e;border-radius:22px;} .ds-pin{display:flex;gap:.9rem;} .ds-cell{position:relative;width:4rem;height:4rem;border-radius:50%;border:3px solid #2b1a2e;background:#fff;} .ds-next{background:#ffc4dd;border-style:dashed;} .ds-full::after{content:'';position:absolute;inset:.5rem;border-radius:50%;background:#ff6fae;border:2px solid #2b1a2e;} .ds-full::before{content:'';position:absolute;width:.55rem;height:.55rem;border-radius:50%;background:#fff;top:1rem;left:1.05rem;z-index:1;}"
+    },
+    {
+      "name": "Basket the Mascot",
+      "kind": "custom",
+      "description": "Decorative SVG helper whose face follows html[data-mood]; every mood is also stated in text.",
+      "html": "<svg class=\"ds-mascot\" viewBox=\"0 0 120 110\" aria-hidden=\"true\"><path d=\"M30 48 C30 14, 90 14, 90 48\" fill=\"none\" stroke=\"#2b1a2e\" stroke-width=\"7\" stroke-linecap=\"round\"/><path d=\"M12 46 H108 a6 6 0 0 1 6 7 L104 96 a10 10 0 0 1 -10 8 H26 a10 10 0 0 1 -10 -8 L6 53 a6 6 0 0 1 6 -7 Z\" fill=\"#ffc4dd\" stroke=\"#2b1a2e\" stroke-width=\"5\" stroke-linejoin=\"round\"/><ellipse cx=\"43\" cy=\"72\" rx=\"6\" ry=\"7.5\" fill=\"#2b1a2e\"/><ellipse cx=\"77\" cy=\"72\" rx=\"6\" ry=\"7.5\" fill=\"#2b1a2e\"/><circle cx=\"45\" cy=\"69\" r=\"2\" fill=\"#fff\"/><circle cx=\"79\" cy=\"69\" r=\"2\" fill=\"#fff\"/><ellipse cx=\"31\" cy=\"83\" rx=\"7\" ry=\"4.5\" fill=\"#ff6fae\" opacity=\".75\"/><ellipse cx=\"89\" cy=\"83\" rx=\"7\" ry=\"4.5\" fill=\"#ff6fae\" opacity=\".75\"/><path d=\"M51 84 q9 9 18 0\" fill=\"none\" stroke=\"#2b1a2e\" stroke-width=\"4.5\" stroke-linecap=\"round\"/></svg>",
+      "css": ":host{--ink:#2b1a2e;--pink:#ffc4dd;--pink-deep:#ff6fae;--mint:#bdf0da;--butter:#ffe89a;--sky:#c7e3ff;--lilac:#e3d4ff;} .ds-mascot{display:block;width:5.5rem;height:auto;}"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Kawaii Sticker Sheet",
+    "overview": "ClearCart is a sheet of candy stickers peeled onto a pale pink dotted page. Every container is a sticker: a pastel or white shape with a thick plum outline, a white die-cut ring, a second plum edge and a soft lift. Headings are chunky, rounded Fredoka; reading text is Atkinson Hyperlegible, set large. Basket, a small pink shopping basket with a face, keeps the shopper company and changes expression with the app's state.\n\nThe cuteness is never paid for in legibility. The candy pastels (strawberry, butter, mint, sky, lilac, peach) carry plum ink at 11:1 or better, the body size is 1.25rem, targets are 52–58px tall, and the focus ring is a 4px plum outline with a 9px bubblegum band that shows up on every candy colour. Basket is decorative (`aria-hidden`); every mood it shows is also said in text. Under forced colours the sticker rings drop away and the system falls back to borders.\n\nDensity is low and friendly: generous gaps, one job per sticker, and the single payment waiting for a PIN shown as the brightest sticker on the screen. The previous \"Embossed Label\" world was rejected by the user and is not to be revived.",
+    "keyCharacteristics": [
+      "Plum (#2b1a2e) outlines and plum text on every pastel, in light and dark mode alike.",
+      "Sticker edge: 3px plum border, 5px white ring, 8px plum ring, soft plum lift.",
+      "Pills everywhere small (buttons, inputs, chips, tags, nav); 22–32px corners on cards.",
+      "Fredoka display, Atkinson Hyperlegible body, tabular numerals throughout.",
+      "Basket the mascot reacts to state; motion is springy and only runs when reduced motion is not requested."
+    ],
+    "rules": [
+      {
+        "name": "The Plum On Candy Rule",
+        "body": "Any pastel or white sticker carries plum ink (#2b1a2e) text, in light and dark mode. Never put light text on a pastel, and never let a sticker's text colour follow the colour scheme.",
+        "section": "colors"
+      },
+      {
+        "name": "The Pink Header Rule",
+        "body": "The header stays strawberry with plum ink in both schemes; it is the one fixed band of the sheet.",
+        "section": "colors"
+      },
+      {
+        "name": "The Two Voices Rule",
+        "body": "Fredoka speaks in headings, buttons, prices and speaker names; Atkinson Hyperlegible carries every sentence a shopper must read. Never set running text in Fredoka.",
+        "section": "typography"
+      },
+      {
+        "name": "The Big Small Text Rule",
+        "body": "The smallest text on the sheet is 1.0625rem. Nothing goes smaller.",
+        "section": "typography"
+      },
+      {
+        "name": "The Die-Cut Rule",
+        "body": "A sticker is a whole container (log, panel, list, sheet, notice, pay sticker). Messages, chips and list items inside a sticker get a 2px plum border only, never the full ring.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "**Do** outline every sticker in plum and give whole containers the full die-cut ring (5px white, 8px plum, soft lift).",
+      "**Do** put plum ink (#2b1a2e) on every pastel and white sticker, in both colour schemes.",
+      "**Do** pick fills from the candy set (strawberry, bubblegum, butter, mint, sky, lilac, peach); no other hues.",
+      "**Do** say in text whatever Basket's face shows, and keep Basket `aria-hidden`.",
+      "**Do** keep targets at 52px or taller, text at 1.0625rem or larger, and the plum-and-bubblegum focus ring on everything focusable.",
+      "**Do** wrap springy motion (`cubic-bezier(0.34,1.56,0.64,1)`) in `prefers-reduced-motion: no-preference`, and drop the sticker rings under forced colours."
+    ],
+    "donts": [
+      "**Don't** put light text on a pastel, or let sticker text flip with dark mode.",
+      "**Don't** use square corners; small controls are pills, containers are 22–32px.",
+      "**Don't** set running text in Fredoka.",
+      "**Don't** make Basket the only signal of a state.",
+      "**Don't** add product images; none exist.",
+      "**Don't** bring back the rejected \"Embossed Label\" look."
+    ]
+  }
+}
