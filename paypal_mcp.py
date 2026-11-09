@@ -56,8 +56,9 @@ class PayPalMCP:
         if self._worker:
             self._worker.cancel()
             try:
-                await self._worker
-            except (asyncio.CancelledError, Exception):
+                # Don't let a stuck MCP process block the app from shutting down.
+                await asyncio.wait_for(asyncio.shield(self._worker), timeout=5)
+            except (asyncio.CancelledError, asyncio.TimeoutError, Exception):
                 pass
             self._worker = None
 
