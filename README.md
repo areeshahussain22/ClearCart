@@ -47,6 +47,13 @@ uvicorn app:app --reload
 5. Open http://127.0.0.1:8000, click **Link PayPal**, log in with your **sandbox personal (buyer)**
    account, approve, choose a PIN and limit, then ask the assistant for something.
 
+## For judges
+
+- Hosted demo: https://clearcart-tko8.onrender.com
+  (free hosting: the first load can take up to a minute while it wakes up)
+- A sandbox buyer login for "Link PayPal" is in our Devpost submission.
+- Voice input works in Chrome and Edge. Typing works in any browser.
+
 ## Deploy (Render, Docker)
 
 Use the included `Dockerfile` (it has both Python and Node).
