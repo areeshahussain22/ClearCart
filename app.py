@@ -24,6 +24,7 @@ import agent
 import catalog
 import pages
 import paypal_api
+import search
 from paypal_mcp import mcp_client
 
 logging.basicConfig(level=logging.INFO)
@@ -35,6 +36,8 @@ async def lifespan(app):
     # Start PayPal's MCP server in the background now, so the first PayPal check isn't slow.
     if os.environ.get("PAYPAL_CLIENT_ID") and os.environ.get("PAYPAL_CLIENT_SECRET"):
         mcp_client.start()
+    # Load saved product embeddings; embed any missing/changed products in the background.
+    search.start_background_refresh()
     yield
     await mcp_client.stop()
 
@@ -84,6 +87,7 @@ def store(request: Request):
 @app.get("/health")
 def health():
     return {"ok": True, "mcp_ready": mcp_client.ready, "mcp_error": mcp_client.last_error,
+            "search": {k: search.status[k] for k in ("model", "products_embedded", "products_total", "last_method", "last_error")},
             "ai": [k for k in ("GEMINI_API_KEY", "GROQ_API_KEY") if os.environ.get(k)]}
 
 
@@ -205,7 +209,7 @@ async def api_chat(request: Request):
     acct.pop("pending", None)  # a new request replaces anything waiting for a PIN
     t0 = time.time()
     try:
-        reply, provider, tools_used = await agent.chat(message, history, acct)
+        reply, provider, tools_used, info = await agent.chat(message, history, acct)
     except Exception as e:
         log.exception("agent failed")
         account.touch(acct)
@@ -215,7 +219,7 @@ async def api_chat(request: Request):
     account.touch(acct)
     account.save(request, acct)
     return JSONResponse({"reply": reply, "provider": provider, "tools": tools_used,
-                         "seconds": round(time.time() - t0, 1), **_state(acct)})
+                         "seconds": round(time.time() - t0, 1), **info, **_state(acct)})
 
 
 @app.post("/api/confirm")

@@ -47,6 +47,22 @@ uvicorn app:app --reload
 5. Open http://127.0.0.1:8000, click **Link PayPal**, log in with your **sandbox personal (buyer)**
    account, approve, choose a PIN and limit, then ask the assistant for something.
 
+## Smart product search (embeddings)
+
+- Each product's text is turned into an embedding **once** with Gemini (`gemini-embedding-001`, 768 numbers)
+  and saved in `product_embeddings.json`. The app loads it at startup, so there are no embedding calls then.
+- Only new or changed products are re-embedded (each product's text has a fingerprint).
+- **Retrieve first:** for a shopping message, code finds the 8 closest products by meaning (price limits applied by
+  code) and sends them with the message, so the AI answers in one call.
+- **Direct replies:** for buying, refunds, tracking and order status, the reply is written by code from PayPal's
+  result, so no second AI call is needed.
+- If the embedding service is down, search falls back to keywords.
+- Scaling path for big stores: the same design with a vector database (for example Postgres + pgvector).
+
+Scripts:
+- `python build_embeddings.py` creates or updates `product_embeddings.json` (run it after changing products).
+- `python eval_search.py` compares keyword search with meaning search on 24 test requests and saves `eval_results.json`.
+
 ## For judges
 
 - Hosted demo: https://clearcart-tko8.onrender.com
