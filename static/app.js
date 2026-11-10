@@ -10,6 +10,11 @@
   const confirmBox = document.getElementById("confirm");
   const confirmH = document.getElementById("confirm-h");
   const readback = document.getElementById("readback");
+  const confirmSub = document.getElementById("confirm-sub");
+  const pinSubmit = document.getElementById("pin-submit");
+  const meter = document.getElementById("confirm-meter");
+  const meterText = document.getElementById("confirm-meter-text");
+  const meterBar = document.getElementById("confirm-meter-bar");
   const pinForm = document.getElementById("pin-form");
   const pin = document.getElementById("pin");
   const cancelBtn = document.getElementById("cancel");
@@ -19,6 +24,14 @@
   const unlockPin = document.getElementById("unlock-pin");
   const history = [];
   let busy = false;
+  // Basket the mascot shows how things are going. Purely visual: every state is also said in text.
+  let moodTimer = null;
+  function mood(m, ms) {
+    clearTimeout(moodTimer);
+    document.documentElement.dataset.mood = m;
+    if (ms) moodTimer = setTimeout(() => { document.documentElement.dataset.mood = "idle"; }, ms);
+  }
+  function resync() { if (window.ccPinSync) { window.ccPinSync(pin); window.ccPinSync(unlockPin); } }
 
   // ---- Remembered setting (per browser only) ----
   try { speakBox.checked = localStorage.getItem("cc-speak") === "1"; } catch (e) {}
@@ -32,9 +45,13 @@
     p.className = "msg " + (who === "you" ? "you" : "bot");
     const label = document.createElement("span");
     label.className = "who";
-    label.textContent = who === "you" ? "You: " : "ClearCart: ";
+    label.textContent = who === "you" ? "You" : "ClearCart";
+    const colon = document.createElement("span");
+    colon.className = "sr-only";
+    colon.textContent = ":";
+    label.appendChild(colon);
     p.appendChild(label);
-    p.appendChild(document.createTextNode(text));
+    p.appendChild(document.createTextNode(" " + text));
     log.appendChild(p);
     p.scrollIntoView({ block: "nearest" });
   }
@@ -57,21 +74,42 @@
   function applyState(data) {
     if (data.redirect) { window.location.href = data.redirect; return; }
     if (data.locked) {
+      mood("sleepy");
       unlockBox.hidden = false;
       confirmBox.hidden = true;
       unlockPin.value = "";
+      resync();
       unlockH.focus();
       return;
     }
     unlockBox.hidden = true;
     if (data.pending) {
-      readback.textContent = data.pending.readback;
-      confirmH.textContent = data.pending.type === "refund" ? "Check before you confirm the refund" : "Check before you pay";
+      mood(data.ok === false ? "worried" : "excited");
+      const p = data.pending;
+      const refund = p.type === "refund";
+      readback.textContent = p.readback;
+      confirmH.textContent = p.amount ? (refund ? "Refund " : "Pay ") + p.amount
+        : (refund ? "Check before you confirm the refund" : "Check before you pay");
+      confirmSub.textContent = refund ? "Nothing has been refunded yet." : "Nothing has been charged yet.";
+      confirmSub.hidden = /Nothing has been/i.test(p.readback);  // the read-back already says it
+      pinSubmit.textContent = (refund ? "Refund" : "Pay") + (p.amount ? " " + p.amount : "");
+      log.scrollTop = log.scrollHeight;
+      if (!refund && p.amount && p.limit) {
+        meterText.textContent = p.amount + " of your " + p.limit + " limit";
+        meterBar.style.width = p.share + "%";
+        meter.hidden = false;
+      } else {
+        meter.hidden = true;
+      }
       confirmBox.hidden = false;
       pin.value = "";
+      resync();
       pin.focus();
     } else {
       confirmBox.hidden = true;
+      if (data.ok === true) mood("happy", 6000);
+      else if (data.ok === false) mood("worried", 5000);
+      else if (document.documentElement.dataset.mood !== "happy") mood("idle");
     }
   }
 
@@ -92,12 +130,14 @@
     const sentHistory = history.slice(-10);
     history.push({ role: "user", text: text });
     msg.value = "";
+    mood("thinking");
     try {
       const data = await post("/api/chat", { message: text, history: sentHistory });
       reply(data.reply || "Sorry, something went wrong.");
       applyState(data);
     } catch (e) {
       reply("Sorry, I couldn't reach ClearCart. Check your connection and try again.");
+      mood("worried", 5000);
     } finally {
       busy = false;
     }
@@ -111,6 +151,7 @@
     busy = true;
     const value = pin.value;
     pin.value = "";
+    resync();
     try {
       const data = await post("/api/confirm", { pin: value });
       reply(data.reply);
@@ -134,6 +175,7 @@
     e.preventDefault();
     const value = unlockPin.value;
     unlockPin.value = "";
+    resync();
     const data = await post("/api/unlock", { pin: value });
     reply(data.reply);
     applyState(data);
@@ -174,6 +216,7 @@
     });
     rec.onstart = () => {
       listening = true;
+      mood("listening");
       micBtn.setAttribute("aria-pressed", "true");
       micBtn.textContent = "Listening… (press to stop)";
       showVoice("Listening…");
@@ -204,6 +247,7 @@
     };
     rec.onend = () => {
       listening = false;
+      if (document.documentElement.dataset.mood === "listening") mood("idle");
       clearTimeout(stopTimer);
       micBtn.setAttribute("aria-pressed", "false");
       micBtn.textContent = "Talk";

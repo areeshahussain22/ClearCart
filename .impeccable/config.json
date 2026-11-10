@@ -1,0 +1,44 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "cream-palette",
+        "value": "*",
+        "files": [
+          ".impeccable/mocks/decision/challenger-warm.html"
+        ],
+        "createdAt": "2026-11-09T12:46:28.685Z",
+        "reason": "Claude decided: decision-round sketch rendering the catalog challenger's own warm-tinted-ground palette; not shipped UI"
+      },
+      {
+        "rule": "design-system-font",
+        "value": "*",
+        "files": [
+          ".impeccable/mocks/decision/assigned.html"
+        ],
+        "createdAt": "2026-11-09T14:51:18.704Z",
+        "reason": "Claude decided: throwaway decision-round sketch, not shipped UI; predates DESIGN.md"
+      },
+      {
+        "rule": "design-system-font",
+        "value": "*",
+        "files": [
+          ".impeccable/mocks/decision/model-pick.html"
+        ],
+        "createdAt": "2026-11-09T14:51:18.731Z",
+        "reason": "Claude decided: throwaway decision-round sketch, not shipped UI; predates DESIGN.md"
+      },
+      {
+        "rule": "design-system-font",
+        "value": "*",
+        "files": [
+          ".impeccable/mocks/decision/challenger-warm.html"
+        ],
+        "createdAt": "2026-11-09T14:51:18.756Z",
+        "reason": "Claude decided: throwaway decision-round sketch, not shipped UI; predates DESIGN.md"
+      }
+    ]
+  }
+}
