@@ -135,7 +135,7 @@ On Render's free plan the app sleeps when idle, so the first load can take about
 ## Team
 
 - Areesha Hussain
-- Sarah
+- Sarah Mahmood
 
 ## Credits
 
